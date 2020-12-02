@@ -3,7 +3,7 @@
   body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "box1" "box2" "box3";
+    grid-template-areas: "sc1" "sc2" "sc3";
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
@@ -11,7 +11,7 @@
   }
   body nav {
     position: fixed;
-    grid-area: box1;
+    grid-area: sc1;
     width: 94%;
     height: 97px;
     padding-left: 3%;
@@ -71,18 +71,88 @@ body nav .navegacio ul li:nth-child(10) {
     width: 100%;
     margin-right: 0 !important;
   }
-  body main section article:nth-child(1) div:nth-child(3),
-body main section article:nth-child(1) div:nth-child(5),
-body main section article:nth-child(1) div:nth-child(7) {
+  body main section article:nth-child(1) div:nth-child(2n+3) {
     grid-template-columns: 20% 80% !important;
   }
-  body main section article:nth-child(1) div:nth-child(3) .elements .phone,
-body main section article:nth-child(1) div:nth-child(5) .elements .phone,
-body main section article:nth-child(1) div:nth-child(7) .elements .phone {
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .save {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    align-self: left;
+    width: 68px;
+    height: 24px;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    margin-right: 1em;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .save img {
+    width: 15px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .save label {
+    color: #AEADAD;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .send {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    align-self: left;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    margin-right: 1em;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .send img {
+    width: 15px;
+    height: 12px;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .send label {
+    color: #AEADAD;
+  }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .phone {
     display: none !important;
   }
   body main section article:nth-child(2) div:nth-child(2n+3) {
     grid-template-columns: 100px 80% !important;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .save {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    align-self: left;
+    width: 68px;
+    height: 24px;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    margin-right: 1em;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .save img {
+    width: 15px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .save label {
+    color: #AEADAD;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .send {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    align-self: left;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    margin-right: 1em;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .send img {
+    width: 15px;
+    height: 12px;
+  }
+  body main section article:nth-child(2) div:nth-child(2n+3) .elements .send label {
+    color: #AEADAD;
   }
   body main section article:nth-child(2) div:nth-child(2n+3) .elements .phone {
     display: none !important;
@@ -94,7 +164,7 @@ body main section article:nth-child(1) div:nth-child(7) .elements .phone {
 /*
 main {
     width: 100%;
-    grid-area: box3;
+    grid-area: sc3;
     margin-top: 100px;
     margin-bottom: 30px;
 
@@ -133,24 +203,24 @@ main {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                    "box1 box2"
-                    "box1 box3"
-                    "box1 box4"
+                    "sc1 sc2"
+                    "sc1 sc3"
+                    "sc1 box4"
                 ;
 
                 img {
                     width: 80px;
                     margin-right: 30px;
-                    grid-area: box1;
+                    grid-area: sc1;
                 }
 
                 h4 {
-                    grid-area: box2;
+                    grid-area: sc2;
                     width: 100%;
                 }
 
                 p {
-                    grid-area: box3;
+                    grid-area: sc3;
                     width: 100%;
                     color: $navText;
                 }
@@ -277,24 +347,24 @@ main {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                    "box1 box2"
-                    "box1 box3"
-                    "box1 box4"
+                    "sc1 sc2"
+                    "sc1 sc3"
+                    "sc1 box4"
                 ;
 
                 img {
                     width: 80px;
                     margin-right: 30px;
-                    grid-area: box1;
+                    grid-area: sc1;
                 }
 
                 h4 {
-                    grid-area: box2;
+                    grid-area: sc2;
                     width: 100%;
                 }
 
                 p {
-                    grid-area: box3;
+                    grid-area: sc3;
                     width: 100%;
                     color: $navText;
                 }
@@ -358,14 +428,14 @@ main {
   body {
     display: grid;
     grid-template-columns: 3% 47% 47% 3%;
-    grid-template-areas: "box1 box1 box1 box1" ". box2 box2 ." ". box3 box3 .";
+    grid-template-areas: "fsc1 fsc1 fsc1 fsc1" ". fsc2 fsc2 ." ". fsc3 fsc3 .";
     background-color: #F9F9F9;
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
     /*main {
                 width: 100%;
-                grid-area: box3;
+                grid-area: fsc3;
                 margin-bottom: 30px;
                 background-color: $htmlBackground;
 
@@ -405,24 +475,24 @@ main {
                             grid-template-columns: 100px 85%;
 
                             grid-template-areas:
-                                "box1 box2"
-                                "box1 box3"
-                                "box1 box4"
+                                "fsc1 fsc2"
+                                "fsc1 fsc3"
+                                "fsc1 box4"
                             ;
 
                             img {
                                 width: 80px;
                                 margin-right: 30px;
-                                grid-area: box1;
+                                grid-area: fsc1;
                             }
 
                             h4 {
-                                grid-area: box2;
+                                grid-area: fsc2;
                                 width: 100%;
                             }
 
                             p {
-                                grid-area: box3;
+                                grid-area: fsc3;
                                 width: 100%;
                                 color: $navText;
                             }
@@ -573,24 +643,24 @@ main {
                             grid-template-columns: 100px 85%;
 
                             grid-template-areas:
-                                "box1 box2"
-                                "box1 box3"
-                                "box1 box4"
+                                "fsc1 fsc2"
+                                "fsc1 fsc3"
+                                "fsc1 box4"
                             ;
 
                             img {
                                 width: 80px;
                                 margin-right: 30px;
-                                grid-area: box1;
+                                grid-area: fsc1;
                             }
 
                             h4 {
-                                grid-area: box2;
+                                grid-area: fsc2;
                                 width: 100%;
                             }
 
                             p {
-                                grid-area: box3;
+                                grid-area: fsc3;
                                 width: 100%;
                                 color: $navText;
                             }
@@ -681,7 +751,7 @@ main {
   }
   body nav {
     position: fixed;
-    grid-area: box1;
+    grid-area: fsc1;
     width: 94%;
     height: 97px;
     padding-left: 3%;
@@ -731,50 +801,62 @@ body nav .navegacio ul li:nth-child(10) {
     display: none;
   }
   body header {
-    grid-area: box2;
+    grid-area: fsc2;
     display: grid;
     grid-template-columns: 12% 30% 18% 29% 9% 2%;
     grid-template-rows: repeat(4, 25%);
-    grid-template-areas: ". . . . . ." "elm1 elm2 elm3 elm3 elm6 ." ". elm4 elm4 elm5 . .";
+    grid-template-areas: "sc1 sc2 sc3 sc3 sc6 ." ". sc4 sc4 sc5 . .";
     margin-top: 127px;
     margin-bottom: 30px;
-    height: 130px;
+    height: 100px;
     background-color: #FFF;
     border: 1px solid #e9e9e9;
   }
   body header img:nth-child(1) {
-    align-self: center;
-    justify-self: end;
-    grid-area: elm1;
+    margin-top: 0.5em;
+    align-self: right;
+    grid-area: sc2;
+    justify-self: right;
+    margin-right: 14em;
     width: 25px;
     height: 25px;
+    /*align-self: center;
+    justify-self: end;
+    grid-area: sc2;
+    width: 25px;
+    height: 25px;*/
   }
   body header h4 {
+    margin-top: 1em;
     align-self: center;
-    justify-self: center;
-    grid-area: elm2;
+    justify-self: right;
+    grid-area: sc2;
     font-weight: bold;
+    margin-right: 1em;
   }
   body header p {
+    margin-top: 1em;
     align-self: center;
-    justify-self: center;
-    grid-area: elm3;
+    justify-self: left;
+    grid-area: sc3;
     color: #AEADAD;
   }
   body header input {
+    margin-top: 3em;
     align-self: center;
     justify-self: end;
     margin-right: 10px;
-    grid-area: elm4;
+    grid-area: sc4;
     padding: 10px;
     border: 1px solid #e9e9e9;
     color: red;
     font-size: 15px;
   }
   body header button {
+    margin-top: 3em;
     align-self: center;
     justify-self: start;
-    grid-area: elm5;
+    grid-area: sc5;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #e37f63;
@@ -785,8 +867,13 @@ body nav .navegacio ul li:nth-child(10) {
   body header .cross {
     align-self: center;
     justify-self: end;
-    grid-area: elm6;
+    grid-area: sc6;
     width: 15px;
+  }
+  body main {
+    grid-area: fsc3 !important;
+    margin-bottom: 30px !important;
+    background-color: #F9F9F9;
   }
   body aside {
     display: none;
@@ -796,14 +883,14 @@ body nav .navegacio ul li:nth-child(10) {
   body {
     display: grid;
     grid-template-columns: 3% 47% 47% 3%;
-    grid-template-areas: "box1 box1 box1 box1" ". box2 box2 ." ". box3 box3 .";
+    grid-template-areas: "fsc1 fsc1 fsc1 fsc1" ". fsc2 fsc2 ." ". fsc3 fsc3 .";
     background-color: #F9F9F9;
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
     /* main {
           width: 100%;
-          grid-area: box3;
+          grid-area: fsc3;
           margin-bottom: 30px;
           background-color: $htmlBackground;
 
@@ -843,24 +930,24 @@ body nav .navegacio ul li:nth-child(10) {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                  "box1 box2"
-                  "box1 box3"
-                  "box1 box4"
+                  "fsc1 fsc2"
+                  "fsc1 fsc3"
+                  "fsc1 box4"
                 ;
 
                 img {
                   width: 80px;
                   margin-right: 30px;
-                  grid-area: box1;
+                  grid-area: fsc1;
                 }
 
                 h4 {
-                  grid-area: box2;
+                  grid-area: fsc2;
                   width: 100%;
                 }
 
                 p {
-                  grid-area: box3;
+                  grid-area: fsc3;
                   width: 100%;
                   color: $navText;
                 }
@@ -1011,24 +1098,24 @@ body nav .navegacio ul li:nth-child(10) {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                  "box1 box2"
-                  "box1 box3"
-                  "box1 box4"
+                  "fsc1 fsc2"
+                  "fsc1 fsc3"
+                  "fsc1 box4"
                 ;
 
                 img {
                   width: 80px;
                   margin-right: 30px;
-                  grid-area: box1;
+                  grid-area: fsc1;
                 }
 
                 h4 {
-                  grid-area: box2;
+                  grid-area: fsc2;
                   width: 100%;
                 }
 
                 p {
-                  grid-area: box3;
+                  grid-area: fsc3;
                   width: 100%;
                   color: $navText;
                 }
@@ -1119,7 +1206,7 @@ body nav .navegacio ul li:nth-child(10) {
   }
   body nav {
     position: fixed;
-    grid-area: box1;
+    grid-area: fsc1;
     width: 94%;
     height: 97px;
     padding-left: 3%;
@@ -1168,7 +1255,7 @@ body nav .navegacio ul li:nth-child(10) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    grid-area: box2;
+    grid-area: fsc2;
     margin-top: 127px;
     margin-bottom: 30px;
     height: 70px;
@@ -1215,13 +1302,13 @@ body nav .navegacio ul li:nth-child(10) {
   body {
     display: grid;
     grid-template-columns: 12% 56% 20% 12%;
-    grid-template-areas: "box1 box1 box1 box1" ". box2 box2 ." ". box3 box4 .";
+    grid-template-areas: "sc1 sc1 sc1 sc1" ". sc2 sc2 ." ". sc3 sc4 .";
     background-color: #F9F9F9;
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
     /*main {
-          grid-area: box3;
+          grid-area: sc3;
           margin-right: 22px;
           margin-bottom: 30px;
           background-color: $htmlBackground;
@@ -1264,31 +1351,31 @@ body nav .navegacio ul li:nth-child(10) {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                  "box1 box2"
-                  "box1 box3"
-                  "box1 box4"
+                  "sc1 sc2"
+                  "sc1 sc3"
+                  "sc1 sc4"
                 ;
 
                 img {
                   width: 80px;
                   margin-right: 30px;
-                  grid-area: box1;
+                  grid-area: sc1;
                 }
 
                 h4 {
-                  grid-area: box2;
+                  grid-area: sc2;
                   width: 100%;
                 }
 
                 p {
-                  grid-area: box3;
+                  grid-area: sc3;
                   width: 100%;
                   color: $navText;
                 }
 
-                // box4 box5 box6
+                // sc4 box5 box6
                 .elements {
-                  grid-area: box4;
+                  grid-area: sc4;
                   display: flex;
                   align-items: center;
                   width: 100%;
@@ -1429,31 +1516,31 @@ body nav .navegacio ul li:nth-child(10) {
                 grid-template-columns: 100px 85%;
 
                 grid-template-areas:
-                  "box1 box2"
-                  "box1 box3"
-                  "box1 box4"
+                  "sc1 sc2"
+                  "sc1 sc3"
+                  "sc1 sc4"
                 ;
 
                 img {
                   width: 80px;
                   margin-right: 30px;
-                  grid-area: box1;
+                  grid-area: sc1;
                 }
 
                 h4 {
-                  grid-area: box2;
+                  grid-area: sc2;
                   width: 100%;
                 }
 
                 p {
-                  grid-area: box3;
+                  grid-area: sc3;
                   width: 100%;
                   color: $navText;
                 }
 
-                // box4 box5 box6
+                // sc4 box5 box6
                 .elements {
-                  grid-area: box4;
+                  grid-area: sc4;
                   display: flex;
                   align-items: center;
                   width: 100%;
@@ -1534,7 +1621,7 @@ body nav .navegacio ul li:nth-child(10) {
   }
   body nav {
     position: fixed;
-    grid-area: box1;
+    grid-area: sc1;
     width: 76%;
     height: 97px;
     padding-left: 12%;
@@ -1583,7 +1670,7 @@ body nav .navegacio ul li:nth-child(10) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    grid-area: box2;
+    grid-area: sc2;
     margin-top: 127px;
     margin-bottom: 30px;
     height: 70px;
@@ -1626,7 +1713,7 @@ body nav .navegacio ul li:nth-child(10) {
     margin-right: 22px;
   }
   body aside {
-    grid-area: box4;
+    grid-area: sc4;
   }
   body aside article {
     padding-top: 20px;
@@ -1728,7 +1815,7 @@ html .cross {
   height: 15px;
 }
 html main {
-  grid-area: box3;
+  grid-area: sc3;
   margin-bottom: 30px;
   background-color: #F9F9F9;
 }
@@ -1759,24 +1846,23 @@ html main section article:nth-child(1) div:nth-child(2n+3) {
   justify-content: start;
   width: 100%;
   grid-template-columns: 100px 85%;
-  grid-template-areas: "box1 box2" "box1 box3" "box1 box4";
+  grid-template-areas: "sc1 sc2" "sc1 sc3" "sc1 sc4";
 }
 html main section article:nth-child(1) div:nth-child(2n+3) img {
   width: 80px;
-  margin-right: 30px;
-  grid-area: box1;
+  grid-area: sc1;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) h4 {
-  grid-area: box2;
+  grid-area: sc2;
   width: 100%;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) p {
-  grid-area: box3;
+  grid-area: sc3;
   width: 100%;
   color: #AEADAD;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements {
-  grid-area: box4;
+  grid-area: sc4;
   display: flex;
   align-items: center;
   width: 100%;
@@ -1787,7 +1873,7 @@ html main section article:nth-child(1) div:nth-child(2n+3) .elements .likes {
   width: 68px;
   height: 24px;
   border: 1px solid #e9e9e9;
-  margin-right: 20px;
+  margin-right: 1em;
   border-radius: 4px;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .likes img {
@@ -1804,6 +1890,7 @@ html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments {
   height: 24px;
   border: 1px solid #e9e9e9;
   border-radius: 4px;
+  margin-right: 1em;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments img {
   width: 15px;
@@ -1812,6 +1899,12 @@ html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments i
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments label {
   color: #AEADAD;
+}
+html main section article:nth-child(1) div:nth-child(2n+3) .elements .save {
+  display: none;
+}
+html main section article:nth-child(1) div:nth-child(2n+3) .elements .send {
+  display: none;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .phone {
   display: flex;
@@ -1887,24 +1980,23 @@ html main section article:nth-child(2) div:nth-child(2n+3) {
   justify-content: start;
   width: 100%;
   grid-template-columns: 100px 85%;
-  grid-template-areas: "box1 box2" "box1 box3" "box1 box4";
+  grid-template-areas: "sc1 sc2" "sc1 sc3" "sc1 sc4";
 }
 html main section article:nth-child(2) div:nth-child(2n+3) img {
   width: 80px;
-  margin-right: 30px;
-  grid-area: box1;
+  grid-area: sc1;
 }
 html main section article:nth-child(2) div:nth-child(2n+3) h4 {
-  grid-area: box2;
+  grid-area: sc2;
   width: 100%;
 }
 html main section article:nth-child(2) div:nth-child(2n+3) p {
-  grid-area: box3;
+  grid-area: sc3;
   width: 100%;
   color: #AEADAD;
 }
 html main section article:nth-child(2) div:nth-child(2n+3) .elements {
-  grid-area: box4;
+  grid-area: sc4;
   display: flex;
   align-items: center;
   width: 100%;
@@ -1940,6 +2032,12 @@ html main section article:nth-child(2) div:nth-child(2n+3) .elements .comments i
 }
 html main section article:nth-child(2) div:nth-child(2n+3) .elements .comments label {
   color: #AEADAD;
+}
+html main section article:nth-child(2) div:nth-child(2n+3) .elements .save {
+  display: none;
+}
+html main section article:nth-child(2) div:nth-child(2n+3) .elements .send {
+  display: none;
 }
 html main section article:nth-child(2) div:nth-child(2n+3) .elements .phone {
   display: flex;

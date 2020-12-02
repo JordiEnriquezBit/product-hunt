@@ -5,16 +5,16 @@
         display: grid;
         grid-template-columns: 3% 47% 47% 3%;
         grid-template-areas:
-            "fsc1 fsc1 fsc1 fsc1"
-            ". fsc2 fsc2 ."
-            ". fsc3 fsc3 ."
+            "box1 box1 box1 box1"
+            ". box2 box2 ."
+            ". box3 box3 ."
         ;
         background-color: $htmlBackground;
 
         /* NAVIGATION */
         nav {
             position: fixed;
-            grid-area: fsc1;
+            grid-area: box1;
             width: 94%;
             height: 97px;
             padding-left: 3%;
@@ -83,63 +83,49 @@
 
         /* HEADER */
         header {
-            grid-area: fsc2;
+            grid-area: box2;
             display: grid;
             grid-template-columns: 12% 30% 18% 29% 9% 2%;
             grid-template-rows: repeat(4, 25%);
             grid-template-areas: 
-            "sc1 sc2 sc3 sc3 sc6 ."
-            ". sc4 sc4 sc5 . ."
+            ". . . . . ."
+            "elm1 elm2 elm3 elm3 elm6 ."
+            ". elm4 elm4 elm5 . ."
             ;
 
             margin-top: 127px;
             margin-bottom: 30px;
-            height: 100px;
+            height: 130px;
             background-color: $navBackground;
             border: 1px solid $navBar2;
 
             img:nth-child(1) {
-                margin-top: 0.5em;
-
-                align-self: right;
-                grid-area: sc2;
-                justify-self: right;
-                margin-right: 14em;
-
+                align-self: center;
+                justify-self: end;
+                grid-area: elm1;
                 width: 25px;
                 height: 25px;
-                /*align-self: center;
-                justify-self: end;
-                grid-area: sc2;
-                width: 25px;
-                height: 25px;*/
             }
 
             h4 {
-                margin-top: 1em;
-
                 align-self: center;
-                justify-self: right;
-                grid-area: sc2;
+                justify-self: center;
+                grid-area: elm2;
                 font-weight: bold;
-                margin-right: 1em;
             }
 
             p {
-                margin-top: 1em;
-
                 align-self: center;
-                justify-self: left;
-                grid-area: sc3;
+                justify-self: center;
+                grid-area: elm3;
                 color: $navText;
             }
 
             input {
-                margin-top: 3em;
                 align-self: center;
                 justify-self: end;
                 margin-right: 10px;
-                grid-area: sc4;
+                grid-area: elm4;
                 padding: 10px;
                 border: 1px solid $navBar2;
                 color: red;
@@ -147,11 +133,9 @@
             }
 
             button {
-                margin-top: 3em;
-
                 align-self: center;
                 justify-self: start;
-                grid-area: sc5;
+                grid-area: elm5;
                 padding: 10px;
                 border-radius: 3px;
                 border: 1px solid $headBorder;
@@ -163,21 +147,16 @@
             .cross {
                 align-self: center;
                 justify-self: end;
-                grid-area: sc6;
+                grid-area: elm6;
                 width: 15px;
             }
 
         }
 
         /* MAIN */
-        main{
-            grid-area: fsc3 !important;
-            margin-bottom: 30px !important;
-            background-color: $htmlBackground;
-        }
-        /*main {
+        main {
             width: 100%;
-            grid-area: fsc3;
+            grid-area: box3 !important;
             margin-bottom: 30px;
             background-color: $htmlBackground;
 
@@ -217,24 +196,24 @@
                         grid-template-columns: 100px 85%;
 
                         grid-template-areas:
-                            "fsc1 fsc2"
-                            "fsc1 fsc3"
-                            "fsc1 box4"
+                            "box1 box2"
+                            "box1 box3"
+                            "box1 box4"
                         ;
 
                         img {
                             width: 80px;
                             margin-right: 30px;
-                            grid-area: fsc1;
+                            grid-area: box1;
                         }
 
                         h4 {
-                            grid-area: fsc2;
+                            grid-area: box2;
                             width: 100%;
                         }
 
                         p {
-                            grid-area: fsc3;
+                            grid-area: box3;
                             width: 100%;
                             color: $navText;
                         }
@@ -385,24 +364,24 @@
                         grid-template-columns: 100px 85%;
 
                         grid-template-areas:
-                            "fsc1 fsc2"
-                            "fsc1 fsc3"
-                            "fsc1 box4"
+                            "box1 box2"
+                            "box1 box3"
+                            "box1 box4"
                         ;
 
                         img {
                             width: 80px;
                             margin-right: 30px;
-                            grid-area: fsc1;
+                            grid-area: box1;
                         }
 
                         h4 {
-                            grid-area: fsc2;
+                            grid-area: box2;
                             width: 100%;
                         }
 
                         p {
-                            grid-area: fsc3;
+                            grid-area: box3;
                             width: 100%;
                             color: $navText;
                         }
@@ -488,7 +467,7 @@
                 }
             }
         }
-*/
+
         /* ASIDE */
         aside {
             display: none;

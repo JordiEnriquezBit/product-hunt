@@ -5,16 +5,16 @@
     display: grid;
     grid-template-columns: 3% 47% 47% 3%;
     grid-template-areas:
-      "box1 box1 box1 box1"
-      ". box2 box2 ."
-      ". box3 box3 ."
+      "fsc1 fsc1 fsc1 fsc1"
+      ". fsc2 fsc2 ."
+      ". fsc3 fsc3 ."
     ;
     background-color: $htmlBackground;
 
     /* NAVIGATION */
     nav {
       position: fixed;
-      grid-area: box1;
+      grid-area: fsc1;
       width: 94%;
       height: 97px;
       padding-left: 3%;
@@ -80,7 +80,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      grid-area: box2;
+      grid-area: fsc2;
       margin-top: 127px;
       margin-bottom: 30px;
       height: 70px;
@@ -130,7 +130,7 @@
     /* MAIN */
    /* main {
       width: 100%;
-      grid-area: box3;
+      grid-area: fsc3;
       margin-bottom: 30px;
       background-color: $htmlBackground;
 
@@ -170,24 +170,24 @@
             grid-template-columns: 100px 85%;
 
             grid-template-areas:
-              "box1 box2"
-              "box1 box3"
-              "box1 box4"
+              "fsc1 fsc2"
+              "fsc1 fsc3"
+              "fsc1 box4"
             ;
 
             img {
               width: 80px;
               margin-right: 30px;
-              grid-area: box1;
+              grid-area: fsc1;
             }
 
             h4 {
-              grid-area: box2;
+              grid-area: fsc2;
               width: 100%;
             }
 
             p {
-              grid-area: box3;
+              grid-area: fsc3;
               width: 100%;
               color: $navText;
             }
@@ -338,24 +338,24 @@
             grid-template-columns: 100px 85%;
 
             grid-template-areas:
-              "box1 box2"
-              "box1 box3"
-              "box1 box4"
+              "fsc1 fsc2"
+              "fsc1 fsc3"
+              "fsc1 box4"
             ;
 
             img {
               width: 80px;
               margin-right: 30px;
-              grid-area: box1;
+              grid-area: fsc1;
             }
 
             h4 {
-              grid-area: box2;
+              grid-area: fsc2;
               width: 100%;
             }
 
             p {
-              grid-area: box3;
+              grid-area: fsc3;
               width: 100%;
               color: $navText;
             }
