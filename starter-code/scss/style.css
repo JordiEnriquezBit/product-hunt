@@ -3,7 +3,7 @@
   body {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "sc1" "sc2" "sc3";
+    grid-template-areas: "fsc1" "fsc2" "fsc3";
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
@@ -11,7 +11,7 @@
   }
   body nav {
     position: fixed;
-    grid-area: sc1;
+    grid-area: fsc1;
     width: 94%;
     height: 97px;
     padding-left: 3%;
@@ -93,6 +93,9 @@ body nav .navegacio ul li:nth-child(10) {
   body main section article:nth-child(1) div:nth-child(2n+3) .elements .save label {
     color: #AEADAD;
   }
+  body main section article:nth-child(1) div:nth-child(2n+3) .elements .win {
+    display: none !important;
+  }
   body main section article:nth-child(1) div:nth-child(2n+3) .elements .send {
     display: flex !important;
     align-items: center;
@@ -161,269 +164,6 @@ body nav .navegacio ul li:nth-child(10) {
     display: none;
   }
 }
-/*
-main {
-    width: 100%;
-    grid-area: sc3;
-    margin-top: 100px;
-    margin-bottom: 30px;
-
-    section {
-        article:nth-child(1) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left: 2%;
-            margin-bottom: 30px;
-            padding-top: 27px;
-            background-color: $navBackground;
-
-            &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-            }
-
-            .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-top: 25px;
-                margin-bottom: 25px;
-            }
-
-            // APPS populars
-            div:nth-child(3),
-            div:nth-child(5),
-            div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                    "sc1 sc2"
-                    "sc1 sc3"
-                    "sc1 box4"
-                ;
-
-                img {
-                    width: 80px;
-                    margin-right: 30px;
-                    grid-area: sc1;
-                }
-
-                h4 {
-                    grid-area: sc2;
-                    width: 100%;
-                }
-
-                p {
-                    grid-area: sc3;
-                    width: 100%;
-                    color: $navText;
-                }
-
-                // box4 box5 box6
-                .elements {
-                    grid-area: box4;
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-
-                    .likes {
-                        grid-area: box4;
-                        display: flex;
-                        align-items: center;
-                        width: 68px;
-                        height: 24px;
-                        border: 1px solid $navBar2;
-                        margin-right: 20px;
-                        border-radius: 4px;
-
-                        img {
-                            margin: 0;
-                            width: 25px;
-                            height: 40px;
-                        }
-                    }
-
-                    .comments {
-                        grid-area: box5;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        align-self: left;
-                        width: 50px;
-                        height: 24px;
-                        border: 1px solid $navBar2;
-                        border-radius: 4px;
-
-                        img {
-                            width: 15px;
-                            height: 12px;
-                            margin-right: 5px;
-                        }
-
-                        label {
-                            color: $navText;
-                        }
-                    }
-
-                    .phone {
-                        display: none;
-                    }
-                }
-
-            }
-
-            // Show more
-            div:nth-child(8) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 20px;
-                font-size: 14px;
-                color: $navText;
-
-                img {
-                    width: 10px;
-                    margin-right: 5px;
-                }
-
-            }
-
-        }
-
-        article:nth-child(2) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 2%;
-            margin-bottom: 30px;
-            background-color: $navBackground;
-
-            &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-
-                .pop-new {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 130px;
-                    font-size: 14px;
-
-                    .separador {
-                        background-color: $navText;
-                        height: 15px;
-                        width: 1px;
-                    }
-
-                    p:nth-child(3) {
-                        color: $navText;
-                    }
-
-                }
-            }
-
-            .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-bottom: 25px;
-            }
-
-            // APPS populars
-            div:nth-child(3),
-            div:nth-child(5),
-            div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                    "sc1 sc2"
-                    "sc1 sc3"
-                    "sc1 box4"
-                ;
-
-                img {
-                    width: 80px;
-                    margin-right: 30px;
-                    grid-area: sc1;
-                }
-
-                h4 {
-                    grid-area: sc2;
-                    width: 100%;
-                }
-
-                p {
-                    grid-area: sc3;
-                    width: 100%;
-                    color: $navText;
-                }
-
-                // box4 box5 box6
-                .elements {
-                    grid-area: box4;
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-
-                    .likes {
-                        grid-area: box4;
-                        display: flex;
-                        align-items: center;
-                        width: 48px;
-                        height: 24px;
-                        border: 1px solid $navBar2;
-                        margin-right: 20px;
-                        border-radius: 4px;
-
-                        img {
-                            margin: 0;
-                            width: 25px;
-                            height: 40px;
-                        }
-                    }
-
-                    .comments {
-                        grid-area: box5;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        align-self: left;
-                        width: 50px;
-                        height: 24px;
-                        border: 1px solid $navBar2;
-                        border-radius: 4px;
-
-                        img {
-                            width: 15px;
-                            height: 12px;
-                            margin-right: 5px;
-                        }
-
-                        label {
-                            color: $navText;
-                        }
-                    }
-
-                    .phone {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     display: grid;
@@ -433,320 +173,6 @@ main {
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
-    /*main {
-                width: 100%;
-                grid-area: fsc3;
-                margin-bottom: 30px;
-                background-color: $htmlBackground;
-
-                section {
-
-                    article:nth-child(1) {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding: 2%;
-                        margin-bottom: 30px;
-                        background-color: $navBackground;
-                        border: 1px solid $navBar2;
-
-                        &>div:nth-child(1) {
-                            display: flex;
-                            justify-content: space-between;
-                            width: 100%;
-                            font-size: 19px;
-                        }
-
-                        .separador {
-                            width: 100%;
-                            height: 1px;
-                            background-color: $navBar;
-                            margin-top: 25px;
-                            margin-bottom: 25px;
-                        }
-
-                        // APPS populars
-                        div:nth-child(3),
-                        div:nth-child(5),
-                        div:nth-child(7) {
-                            display: grid;
-                            justify-content: start;
-                            width: 100%;
-                            grid-template-columns: 100px 85%;
-
-                            grid-template-areas:
-                                "fsc1 fsc2"
-                                "fsc1 fsc3"
-                                "fsc1 box4"
-                            ;
-
-                            img {
-                                width: 80px;
-                                margin-right: 30px;
-                                grid-area: fsc1;
-                            }
-
-                            h4 {
-                                grid-area: fsc2;
-                                width: 100%;
-                            }
-
-                            p {
-                                grid-area: fsc3;
-                                width: 100%;
-                                color: $navText;
-                            }
-
-                            // box4 box5 box6
-                            .elements {
-                                grid-area: box4;
-                                display: flex;
-                                align-items: center;
-                                width: 100%;
-
-                                .likes {
-                                    grid-area: box4;
-                                    display: flex;
-                                    align-items: center;
-                                    width: 68px;
-                                    height: 24px;
-                                    border: 1px solid $navBar2;
-                                    margin-right: 20px;
-                                    border-radius: 4px;
-
-                                    img {
-                                        margin: 0;
-                                        width: 25px;
-                                        height: 40px;
-                                    }
-                                }
-
-                                .comments {
-                                    grid-area: box5;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    align-self: left;
-                                    width: 50px;
-                                    height: 24px;
-                                    border: 1px solid $navBar2;
-                                    border-radius: 4px;
-
-                                    img {
-                                        width: 15px;
-                                        height: 12px;
-                                        margin-right: 5px;
-                                    }
-
-                                    label {
-                                        color: $navText;
-                                    }
-                                }
-
-                                .phone {
-                                    grid-area: box6;
-                                    display: flex;
-                                    align-items: center;
-                                    margin-left: auto;
-                                    width: auto;
-                                    margin-right: -5%;
-
-                                    div {
-                                        display: flex;
-                                        justify-content: flex-end;
-                                        padding: 10px;
-                                        margin-right: 5px;
-                                        font-size: 14px;
-                                        border-radius: 2px;
-
-                                        background-color: $navBar;
-                                    }
-
-                                    p {
-                                        width: 45px;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                    }
-
-                                }
-                            }
-
-                        }
-
-                        // Show more
-                        div:nth-child(8) {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: 100%;
-                            margin-top: 20px;
-                            font-size: 14px;
-                            color: $navText;
-
-                            img {
-                                width: 10px;
-                                margin-right: 5px;
-                            }
-
-                        }
-
-                    }
-
-                    article:nth-child(2) {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding: 2%;
-                        margin-bottom: 30px;
-                        background-color: $navBackground;
-                        border: 1px solid $navBar2;
-
-                        &>div:nth-child(1) {
-                            display: flex;
-                            justify-content: space-between;
-                            width: 100%;
-                            font-size: 19px;
-
-                            .pop-new {
-                                display: flex;
-                                justify-content: space-between;
-                                width: 130px;
-                                font-size: 14px;
-
-                                .separador {
-                                    background-color: $navText;
-                                    height: 15px;
-                                    width: 1px;
-                                }
-
-                                p:nth-child(3) {
-                                    color: $navText;
-                                }
-
-                            }
-                        }
-
-                        .separador {
-                            width: 100%;
-                            height: 1px;
-                            background-color: $navBar;
-                            margin-bottom: 25px;
-                        }
-
-                        // APPS populars
-                        div:nth-child(3),
-                        div:nth-child(5),
-                        div:nth-child(7) {
-                            display: grid;
-                            justify-content: start;
-                            width: 100%;
-                            grid-template-columns: 100px 85%;
-
-                            grid-template-areas:
-                                "fsc1 fsc2"
-                                "fsc1 fsc3"
-                                "fsc1 box4"
-                            ;
-
-                            img {
-                                width: 80px;
-                                margin-right: 30px;
-                                grid-area: fsc1;
-                            }
-
-                            h4 {
-                                grid-area: fsc2;
-                                width: 100%;
-                            }
-
-                            p {
-                                grid-area: fsc3;
-                                width: 100%;
-                                color: $navText;
-                            }
-
-                            // box4 box5 box6
-                            .elements {
-                                grid-area: box4;
-                                display: flex;
-                                align-items: center;
-                                width: 100%;
-
-                                .likes {
-                                    grid-area: box4;
-                                    display: flex;
-                                    align-items: center;
-                                    width: 48px;
-                                    height: 24px;
-                                    border: 1px solid $navBar2;
-                                    margin-right: 20px;
-                                    border-radius: 4px;
-
-                                    img {
-                                        margin: 0;
-                                        width: 25px;
-                                        height: 40px;
-                                    }
-                                }
-
-                                .comments {
-                                    grid-area: box5;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    align-self: left;
-                                    width: 50px;
-                                    height: 24px;
-                                    border: 1px solid $navBar2;
-                                    border-radius: 4px;
-
-                                    img {
-                                        width: 15px;
-                                        height: 12px;
-                                        margin-right: 5px;
-                                    }
-
-                                    label {
-                                        color: $navText;
-                                    }
-                                }
-
-                                .phone {
-                                    grid-area: box6;
-                                    display: flex;
-                                    align-items: center;
-                                    margin-left: auto;
-                                    width: auto;
-                                    margin-right: -5%;
-
-                                    div {
-                                        display: flex;
-                                        justify-content: flex-end;
-                                        padding: 10px;
-                                        margin-right: 5px;
-                                        font-size: 14px;
-                                        border-radius: 2px;
-
-                                        background-color: $navBar;
-                                    }
-
-                                    p {
-                                        width: 45px;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                    }
-
-                                }
-                            }
-
-
-
-                        }
-
-                    }
-                }
-            }
-    */
     /* ASIDE */
   }
   body nav {
@@ -820,11 +246,6 @@ body nav .navegacio ul li:nth-child(10) {
     margin-right: 14em;
     width: 25px;
     height: 25px;
-    /*align-self: center;
-    justify-self: end;
-    grid-area: sc2;
-    width: 25px;
-    height: 25px;*/
   }
   body header h4 {
     margin-top: 1em;
@@ -888,320 +309,6 @@ body nav .navegacio ul li:nth-child(10) {
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
-    /* main {
-          width: 100%;
-          grid-area: fsc3;
-          margin-bottom: 30px;
-          background-color: $htmlBackground;
-
-          section {
-
-            article:nth-child(1) {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 2%;
-              margin-bottom: 30px;
-              background-color: $navBackground;
-              border: 1px solid $navBar2;
-
-              &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-              }
-
-              .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-top: 25px;
-                margin-bottom: 25px;
-              }
-
-              // APPS populars
-              div:nth-child(3),
-              div:nth-child(5),
-              div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                  "fsc1 fsc2"
-                  "fsc1 fsc3"
-                  "fsc1 box4"
-                ;
-
-                img {
-                  width: 80px;
-                  margin-right: 30px;
-                  grid-area: fsc1;
-                }
-
-                h4 {
-                  grid-area: fsc2;
-                  width: 100%;
-                }
-
-                p {
-                  grid-area: fsc3;
-                  width: 100%;
-                  color: $navText;
-                }
-
-                // box4 box5 box6
-                .elements {
-                  grid-area: box4;
-                  display: flex;
-                  align-items: center;
-                  width: 100%;
-
-                  .likes {
-                    grid-area: box4;
-                    display: flex;
-                    align-items: center;
-                    width: 68px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    margin-right: 20px;
-                    border-radius: 4px;
-
-                    img {
-                      margin: 0;
-                      width: 25px;
-                      height: 40px;
-                    }
-                  }
-
-                  .comments {
-                    grid-area: box5;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    align-self: left;
-                    width: 50px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    border-radius: 4px;
-
-                    img {
-                      width: 15px;
-                      height: 12px;
-                      margin-right: 5px;
-                    }
-
-                    label {
-                      color: $navText;
-                    }
-                  }
-
-                  .phone {
-                    grid-area: box6;
-                    display: flex;
-                    align-items: center;
-                    margin-left: auto;
-                    width: auto;
-                    margin-right: -5%;
-
-                    div {
-                      display: flex;
-                      justify-content: flex-end;
-                      padding: 10px;
-                      margin-right: 5px;
-                      font-size: 14px;
-                      border-radius: 2px;
-
-                      background-color: $navBar;
-                    }
-
-                    p {
-                      width: 45px;
-                      font-size: 14px;
-                      font-weight: bold;
-                    }
-
-                  }
-                }
-
-              }
-
-              // Show more
-              div:nth-child(8) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 20px;
-                font-size: 14px;
-                color: $navText;
-
-                img {
-                  width: 10px;
-                  margin-right: 5px;
-                }
-
-              }
-
-            }
-
-            article:nth-child(2) {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 2%;
-              margin-bottom: 30px;
-              background-color: $navBackground;
-              border: 1px solid $navBar2;
-
-              &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-
-                .pop-new {
-                  display: flex;
-                  justify-content: space-between;
-                  width: 130px;
-                  font-size: 14px;
-
-                  .separador {
-                    background-color: $navText;
-                    height: 15px;
-                    width: 1px;
-                  }
-
-                  p:nth-child(3) {
-                    color: $navText;
-                  }
-
-                }
-              }
-
-              .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-bottom: 25px;
-              }
-
-              // APPS populars
-              div:nth-child(3),
-              div:nth-child(5),
-              div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                  "fsc1 fsc2"
-                  "fsc1 fsc3"
-                  "fsc1 box4"
-                ;
-
-                img {
-                  width: 80px;
-                  margin-right: 30px;
-                  grid-area: fsc1;
-                }
-
-                h4 {
-                  grid-area: fsc2;
-                  width: 100%;
-                }
-
-                p {
-                  grid-area: fsc3;
-                  width: 100%;
-                  color: $navText;
-                }
-
-                // box4 box5 box6
-                .elements {
-                  grid-area: box4;
-                  display: flex;
-                  align-items: center;
-                  width: 100%;
-
-                  .likes {
-                    grid-area: box4;
-                    display: flex;
-                    align-items: center;
-                    width: 48px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    margin-right: 20px;
-                    border-radius: 4px;
-
-                    img {
-                      margin: 0;
-                      width: 25px;
-                      height: 40px;
-                    }
-                  }
-
-                  .comments {
-                    grid-area: box5;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    align-self: left;
-                    width: 50px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    border-radius: 4px;
-
-                    img {
-                      width: 15px;
-                      height: 12px;
-                      margin-right: 5px;
-                    }
-
-                    label {
-                      color: $navText;
-                    }
-                  }
-
-                  .phone {
-                    grid-area: box6;
-                    display: flex;
-                    align-items: center;
-                    margin-left: auto;
-                    width: auto;
-                    margin-right: -5%;
-
-                    div {
-                      display: flex;
-                      justify-content: flex-end;
-                      padding: 10px;
-                      margin-right: 5px;
-                      font-size: 14px;
-                      border-radius: 2px;
-
-                      background-color: $navBar;
-                    }
-
-                    p {
-                      width: 45px;
-                      font-size: 14px;
-                      font-weight: bold;
-                    }
-
-                  }
-                }
-
-
-
-              }
-
-            }
-          }
-        }
-    */
     /* ASIDE */
   }
   body nav {
@@ -1294,6 +401,12 @@ body nav .navegacio ul li:nth-child(10) {
     padding-left: 10%;
     padding-right: 2%;
   }
+  body main {
+    width: 100%;
+    grid-area: fsc3;
+    margin-bottom: 30px;
+    background-color: #F9F9F9;
+  }
   body aside {
     display: none;
   }
@@ -1302,326 +415,16 @@ body nav .navegacio ul li:nth-child(10) {
   body {
     display: grid;
     grid-template-columns: 12% 56% 20% 12%;
-    grid-template-areas: "sc1 sc1 sc1 sc1" ". sc2 sc2 ." ". sc3 sc4 .";
+    grid-template-areas: "fsc1 fsc1 fsc1 fsc1" ". fsc2 fsc2 ." ". fsc3 fsc4 .";
     background-color: #F9F9F9;
     /* NAVIGATION */
     /* HEADER */
     /* MAIN */
-    /*main {
-          grid-area: sc3;
-          margin-right: 22px;
-          margin-bottom: 30px;
-          background-color: $htmlBackground;
-
-          section {
-            article:nth-child(1) {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 2%;
-              margin-bottom: 30px;
-              background-color: $navBackground;
-              border: 1px solid $navBar2;
-
-              &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-              }
-
-              .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-top: 20px;
-                margin-bottom: 20px;
-              }
-
-              div:nth-of-type(3){
-                background-color: red;
-              }
-              // APPS populars
-              div:nth-child(3),
-              div:nth-child(5),
-              div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                  "sc1 sc2"
-                  "sc1 sc3"
-                  "sc1 sc4"
-                ;
-
-                img {
-                  width: 80px;
-                  margin-right: 30px;
-                  grid-area: sc1;
-                }
-
-                h4 {
-                  grid-area: sc2;
-                  width: 100%;
-                }
-
-                p {
-                  grid-area: sc3;
-                  width: 100%;
-                  color: $navText;
-                }
-
-                // sc4 box5 box6
-                .elements {
-                  grid-area: sc4;
-                  display: flex;
-                  align-items: center;
-                  width: 100%;
-
-                  .likes {
-                    display: flex;
-                    align-items: center;
-                    width: 68px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    margin-right: 20px;
-                    border-radius: 4px;
-
-                    img {
-                      margin: 0;
-                      width: 25px;
-                      height: 40px;
-                    }
-                  }
-
-                  .comments {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    align-self: left;
-                    width: 50px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    border-radius: 4px;
-
-                    img {
-                      width: 15px;
-                      height: 12px;
-                      margin-right: 5px;
-                    }
-
-                    label {
-                      color: $navText;
-                    }
-                  }
-
-                  .phone {
-                    display: flex;
-                    align-items: center;
-                    margin-left: auto;
-                    width: auto;
-                    margin-right: -5%;
-
-                    div {
-                      display: flex;
-                      justify-content: flex-end;
-                      padding: 10px;
-                      margin-right: 5px;
-                      font-size: 14px;
-                      border-radius: 2px;
-
-                      background-color: $navBar;
-                    }
-
-                    p {
-                      width: 45px;
-                      font-size: 14px;
-                      font-weight: bold;
-                    }
-
-                  }
-                }
-
-              }
-
-              // Show more
-              div:nth-child(8) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 20px;
-                font-size: 14px;
-                color: $navText;
-
-                img {
-                  width: 10px;
-                  margin-right: 5px;
-                }
-
-              }
-
-            }
-
-            article:nth-child(2) {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              padding: 2%;
-              margin-bottom: 30px;
-              background-color: $navBackground;
-              border: 1px solid $navBar2;
-
-              &>div:nth-child(1) {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                font-size: 19px;
-
-                .pop-new {
-                  display: flex;
-                  justify-content: space-between;
-                  width: 130px;
-                  font-size: 14px;
-
-                  .separador {
-                    background-color: $navText;
-                    height: 15px;
-                    width: 1px;
-                  }
-
-                  p:nth-child(3) {
-                    color: $navText;
-                  }
-
-                }
-              }
-
-              .separador {
-                width: 100%;
-                height: 1px;
-                background-color: $navBar;
-                margin-bottom: 25px;
-              }
-
-              // APPS populars
-              div:nth-child(3),
-              div:nth-child(5),
-              div:nth-child(7) {
-                display: grid;
-                justify-content: start;
-                width: 100%;
-                grid-template-columns: 100px 85%;
-
-                grid-template-areas:
-                  "sc1 sc2"
-                  "sc1 sc3"
-                  "sc1 sc4"
-                ;
-
-                img {
-                  width: 80px;
-                  margin-right: 30px;
-                  grid-area: sc1;
-                }
-
-                h4 {
-                  grid-area: sc2;
-                  width: 100%;
-                }
-
-                p {
-                  grid-area: sc3;
-                  width: 100%;
-                  color: $navText;
-                }
-
-                // sc4 box5 box6
-                .elements {
-                  grid-area: sc4;
-                  display: flex;
-                  align-items: center;
-                  width: 100%;
-
-                  .likes {
-                    display: flex;
-                    align-items: center;
-                    width: 48px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    margin-right: 20px;
-                    border-radius: 4px;
-
-                    img {
-                      margin: 0;
-                      width: 25px;
-                      height: 40px;
-                    }
-                  }
-
-                  .comments {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    align-self: left;
-                    width: 50px;
-                    height: 24px;
-                    border: 1px solid $navBar2;
-                    border-radius: 4px;
-
-                    img {
-                      width: 15px;
-                      height: 12px;
-                      margin-right: 5px;
-                    }
-
-                    label {
-                      color: $navText;
-                    }
-                  }
-
-                  .phone {
-                    display: flex;
-                    align-items: center;
-                    margin-left: auto;
-                    width: auto;
-                    margin-right: -5%;
-
-                    div {
-                      display: flex;
-                      justify-content: flex-end;
-                      padding: 10px;
-                      margin-right: 5px;
-                      font-size: 14px;
-                      border-radius: 2px;
-
-                      background-color: $navBar;
-                    }
-
-                    p {
-                      width: 45px;
-                      font-size: 14px;
-                      font-weight: bold;
-                    }
-
-                  }
-                }
-
-
-
-              }
-
-            }
-          }
-        }
-    */
     /* ASIDE */
   }
   body nav {
     position: fixed;
-    grid-area: sc1;
+    grid-area: fsc1;
     width: 76%;
     height: 97px;
     padding-left: 12%;
@@ -1670,7 +473,7 @@ body nav .navegacio ul li:nth-child(10) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    grid-area: sc2;
+    grid-area: fsc2;
     margin-top: 127px;
     margin-bottom: 30px;
     height: 70px;
@@ -1710,10 +513,13 @@ body nav .navegacio ul li:nth-child(10) {
     padding-right: 2%;
   }
   body main {
+    grid-area: fsc3;
     margin-right: 22px;
+    margin-bottom: 30px;
+    background-color: #F9F9F9;
   }
   body aside {
-    grid-area: sc4;
+    grid-area: fsc4;
   }
   body aside article {
     padding-top: 20px;
@@ -1756,7 +562,7 @@ body nav .navegacio ul li:nth-child(10) {
     background-color: #da552f;
     font-weight: bold;
     color: #F9F9F9;
-    background-image: url("../images/logo2.png");
+    background-image: url("../images/hastag.png");
     background-repeat: no-repeat;
     background-position: 10% 50%;
     background-size: 20px;
@@ -1815,7 +621,7 @@ html .cross {
   height: 15px;
 }
 html main {
-  grid-area: sc3;
+  grid-area: fsc3;
   margin-bottom: 30px;
   background-color: #F9F9F9;
 }
@@ -1898,6 +704,23 @@ html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments i
   margin-right: 5px;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .comments label {
+  color: #AEADAD;
+}
+html main section article:nth-child(1) div:nth-child(2n+3) .elements .win {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: left;
+  width: 108px;
+  height: 24px;
+  margin-right: 1em;
+}
+html main section article:nth-child(1) div:nth-child(2n+3) .elements .win img {
+  width: 15px;
+  height: 12px;
+  margin-right: 5px;
+}
+html main section article:nth-child(1) div:nth-child(2n+3) .elements .win label {
   color: #AEADAD;
 }
 html main section article:nth-child(1) div:nth-child(2n+3) .elements .save {
@@ -2039,6 +862,23 @@ html main section article:nth-child(2) div:nth-child(2n+3) .elements .save {
 html main section article:nth-child(2) div:nth-child(2n+3) .elements .send {
   display: none;
 }
+html main section article:nth-child(2) div:nth-child(2n+3) .elements .win {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: left;
+  width: 108px;
+  height: 24px;
+  margin-right: 1em;
+}
+html main section article:nth-child(2) div:nth-child(2n+3) .elements .win img {
+  width: 15px;
+  height: 12px;
+  margin-right: 5px;
+}
+html main section article:nth-child(2) div:nth-child(2n+3) .elements .win label {
+  color: #AEADAD;
+}
 html main section article:nth-child(2) div:nth-child(2n+3) .elements .phone {
   display: flex;
   align-items: center;
@@ -2060,5 +900,143 @@ html main section article:nth-child(2) div:nth-child(2n+3) .elements .phone p {
   font-size: 14px;
   font-weight: bold;
 }
+
+/*
+main {
+
+
+    section {
+        article:nth-child(1) {
+
+
+            &>div:nth-child(1) {
+
+            }
+
+            .separador {
+
+            }
+
+
+             div:nth-child(2n+3){
+
+                img {
+
+                }
+
+                h4 {
+                }
+
+                p {
+
+                }
+
+
+                .elements {
+
+
+                    .likes {
+
+                        img {
+
+                        }
+                    }
+
+                    .comments {
+
+
+                        img {
+
+                        }
+
+                        label {
+                        }
+                    }
+
+                    .phone {
+                    }
+                }
+
+            }
+
+            div:nth-child(8) {
+
+
+                img {
+
+                }
+
+            }
+
+        }
+
+        article:nth-child(2) {
+
+
+            &>div:nth-child(1) {
+
+
+                .pop-new {
+
+
+                    .separador {
+
+                    }
+
+                    p:nth-child(3) {
+
+                    }
+
+                }
+            }
+
+            .separador {
+
+            }
+
+            div:nth-child(2n+3){
+
+                img {
+
+                }
+
+                h4 {
+
+                }
+
+                p {
+
+                }
+
+                .elements {
+
+
+                    .likes {
+
+
+                        img {
+
+                        }
+                    }
+
+                    .comments {
+
+
+                        img {
+
+                        }
+
+                        label {
+                        }
+                    }
+
+                    .phone {
+                    }
+                }
+            }
+        }
+    }
+}
+*/
 
 /*# sourceMappingURL=style.css.map */
