@@ -1,0 +1,239 @@
+@import 'paletteColor.scss';
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "fsc1"
+            "fsc2"
+            "fsc3"
+        ;
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            grid-area: fsc1;
+            width: 94%;
+            height: 97px;
+            padding-left: 3%;
+            padding-right: 3%;
+            background-color: $navBackgroundColor;
+            border-bottom: 2px solid $navBar2Color;
+            color: $navTextColor;
+
+            .buscador {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                    width: 50px;
+                }
+
+                input {
+                    height: 25px;
+                    width: 78%;
+                    padding-left: 30px;
+                    border: 1px solid $navBarColor;
+                    background-image: url("../images/search.png");
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                }
+
+
+            }
+
+            .navegacio {
+                border-top: 1px solid $navBarColor;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        padding: 14px;
+                        font-size: 13px;
+                        height: 1em;
+                        
+
+                        img {
+                            width: 15px;
+                        }
+                    }
+
+                    li:nth-child(1) {
+                        color: black;
+                        background-color: $navBarColor;
+                    }
+
+                    li:nth-child(8),
+                    li:nth-child(9),
+                    li:nth-child(10) {
+                        display: none;
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+        /* HEADER */
+        header {
+            display: none;
+        }
+
+        main {
+            margin-top: 6em;
+
+            section {}
+        }
+        /* MAIN */
+        main {
+           width: 100%;
+           margin-right: 0 !important;
+            section {
+                article:nth-child(1) {
+                                        // APPS populars
+                    div:nth-child(2n+3) {
+                        grid-template-columns: 20% 80% !important;
+
+                        .elements {
+                            .save {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                align-self: left;
+                                width: 68px;
+                                height: 24px;
+                                border: 1px solid $navBar2Color;
+                                border-radius: 4px;
+                                margin-right: 1em;
+              
+                                img {
+                                  width: 15px;
+                                  height: 12px;
+                                  margin-right: 5px;
+                                }
+                                
+                
+                                label {
+                                  color: $navTextColor;
+                                }
+                              }
+              
+                              .win {
+                                  display: none !important;
+                              }
+                              .send {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                align-self: left;
+                                width: 25px;
+                                height: 25px;
+                                border: 1px solid $navBar2Color;
+                                border-radius: 4px;
+                                margin-right: 1em;
+              
+                
+                                img {
+                                  width: 15px;
+                                  height: 12px;
+                                }
+              
+                
+                                label {
+                                  color: $navTextColor;
+                                }
+                              }
+
+                            .phone {
+                                display: none !important;
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                article:nth-child(2) {
+                   
+
+                    
+
+                    // APPS populars
+                    div:nth-child(2n+3) {
+                        grid-template-columns: 100px 80% !important;
+                       
+                        // box4 box5 box6
+                        .elements {
+                           
+                            .save {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                align-self: left;
+                                width: 68px;
+                                height: 24px;
+                                border: 1px solid $navBar2Color;
+                                border-radius: 4px;
+                                margin-right: 1em;
+              
+                                img {
+                                  width: 15px;
+                                  height: 12px;
+                                  margin-right: 5px;
+                                }
+                                
+                
+                                label {
+                                  color: $navTextColor;
+                                }
+                              }
+              
+                              .send {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                align-self: left;
+                                width: 25px;
+                                height: 25px;
+                                border: 1px solid $navBar2Color;
+                                border-radius: 4px;
+                                margin-right: 1em;
+              
+                
+                                img {
+                                  width: 15px;
+                                  height: 12px;
+                                }
+              
+                
+                                label {
+                                  color: $navTextColor;
+                                }
+                              }
+
+                            .phone {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        /* ASIDE */
+        aside {
+            display: none;
+        }
+    }
+}
+

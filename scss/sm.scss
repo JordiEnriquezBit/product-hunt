@@ -1,0 +1,180 @@
+@import 'paletteColor.scss';
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        display: grid;
+        grid-template-columns: 3% 47% 47% 3%;
+        grid-template-areas:
+            "fsc1 fsc1 fsc1 fsc1"
+            ". fsc2 fsc2 ."
+            ". fsc3 fsc3 ."
+        ;
+        background-color: $htmlBackgroundColor;
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            grid-area: fsc1;
+            width: 94%;
+            height: 97px;
+            padding-left: 3%;
+            padding-right: 3%;
+            background-color: $navBackgroundColor;
+            border-bottom: 2px solid $navBar2Color;
+            color: $navTextColor;
+
+            .buscador {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                    width: 50px;
+                }
+
+                input {
+                    height: 25px;
+                    width: 78%;
+                    padding-left: 30px;
+                    border: 1px solid $navBarColor;
+                    background-image: url("../images/search.png");
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                }
+
+
+            }
+
+            .navegacio {
+                border-top: 1px solid $navBarColor;
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+
+                    li {
+                        padding: 14px;
+                        font-size: 13px;
+
+                        img {
+                            width: 15px;
+                        }
+                    }
+
+                    li:nth-child(1) {
+                        color: black;
+                        background-color: $navBarColor;
+                    }
+
+                    li:nth-child(8),
+                    li:nth-child(9),
+                    li:nth-child(10) {
+                        display: none;
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+        /* HEADER */
+        header {
+            grid-area: fsc2;
+            display: grid;
+            grid-template-columns: 12% 30% 18% 29% 9% 2%;
+            grid-template-rows: repeat(4, 25%);
+            grid-template-areas: 
+            "sc1 sc2 sc3 sc3 sc6 ."
+            ". sc4 sc4 sc5 . ."
+            ;
+
+            margin-top: 127px;
+            margin-bottom: 30px;
+            height: 100px;
+            background-color: $navBackgroundColor;
+            border: 1px solid $navBar2Color;
+
+            img:nth-child(1) {
+                margin-top: 0.5em;
+
+                align-self: right;
+                grid-area: sc2;
+                justify-self: right;
+                margin-right: 14em;
+
+                width: 25px;
+                height: 25px;
+               
+            }
+
+            h4 {
+                margin-top: 1em;
+
+                align-self: center;
+                justify-self: right;
+                grid-area: sc2;
+                font-weight: bold;
+                margin-right: 1em;
+            }
+
+            p {
+                margin-top: 1em;
+
+                align-self: center;
+                justify-self: left;
+                grid-area: sc3;
+                color: $navTextColor;
+            }
+
+            input {
+                margin-top: 3em;
+                align-self: center;
+                justify-self: end;
+                margin-right: 10px;
+                grid-area: sc4;
+                padding: 10px;
+                border: 1px solid $navBar2Color;
+                color: red;
+                font-size: 15px;
+            }
+
+            button {
+                margin-top: 3em;
+
+                align-self: center;
+                justify-self: start;
+                grid-area: sc5;
+                padding: 10px;
+                border-radius: 3px;
+                border: 1px solid $headBorderColor;
+                background-color: $headButtonColor;
+                font-weight: bold;
+                color: $htmlBackgroundColor;
+            }
+
+            .cross {
+                align-self: center;
+                justify-self: end;
+                grid-area: sc6;
+                width: 15px;
+            }
+
+        }
+
+        /* MAIN */
+        main{
+            grid-area: fsc3 !important;
+            margin-bottom: 30px !important;
+            background-color: $htmlBackgroundColor;
+        }
+      
+        /* ASIDE */
+        aside {
+            display: none;
+        }
+    }
+}
