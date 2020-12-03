@@ -219,6 +219,9 @@
                                   color: $navTextColor;
                                 }
                               }
+                              .win {
+                                display: none !important;
+                            }
 
                             .phone {
                                 display: none !important;
