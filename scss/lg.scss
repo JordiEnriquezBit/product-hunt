@@ -23,7 +23,7 @@
       border-bottom: 2px solid $navBar2Color;
       color: $navTextColor;
 
-      .buscador {
+      .search {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -118,7 +118,7 @@
           color: $htmlBackgroundColor;
       }
 
-      .cross {
+      .x {
           width: 15px;
           padding-left: 10%;
           padding-right: 2%;
